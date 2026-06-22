@@ -1,5 +1,12 @@
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Pantry">
+<meta name="theme-color" content="#2BA0DC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAADj0lEQVR42u1WTWxUVRT+zr33vTf/0ykDbW0t2ELTJrXUxLbikBEIDT9WjaXSGBLUEBJd4IbgRhMTEk2jiS7UNC5MsMGfNjKykRCNSmIUFxL/qIyBViMmBpDWQZhp39x3j4vBarTTzrRlpWd58875znd+vneA/4YR3djwAIRUpKwFOIsScmdZucJ37y6AF0ClFAAED75ipGStIeSS1kZKAM7GuyvPevb6bhBBCLId4QssEQNjANg7Hjaetm7tADOMsW5bpxqbQQJCLA6ACMwyXi2bWnnikurpl5VxEFEsbt+3C2xAiwcAxPJqhMLI5aiqNnBgAMx69JR1/25nYw+8kloi5m8DCUjJV36TW3qD+5/xzv+gP/848PwhtWoNjDdvoeQ8DPwB+54HC+1F9prs2qCWLddHD6vtD6imVvfYCBgALwgAADOyV+2efkQroDV8fkxl5dousbKRL18UnUn+/ltvPA0pwVwmABGYVX2DrLmZgmHZ3gVjOP01aY1wlGLLKBqDYVFRmX9veO7tK1JBEgD8ew/IzqSbeh3MUIpdN/tYL587A6mg85jOyeY2UVMPY+ZgIGZP33giHJWJbiu5VZ8d9T77EJYl225nx3ft8X7KTMD2QecRjsqGJiIS/kBZAAKAamlHICjaOnz9e7NPPUqZSYQrrA3bvcsXpwcHKBBkz4Ntk7LtRLeV2Axg1qkVRdQToqoWtsOZCeeJAad3t/vSQRhPtqwF0fTxd3gsTf4AtCYlnYf2iVuai6m6KKbPsG0QgYgzE/a+p1XfI3zpgqhbRURmKqdPfkShCP96wbpjk+hMUvFtULOOJwC++ntBiygU4SuTVNcAx4EQICIhvdNfWK4L25HbdsAYePlyesAMwJwfh87DdXVqiJgpGBKxuHfmG/Y8Np7+8RyFwshM6tQQhPR++XkmsxIYMAPQY2n+aYzWtLrvvzv11qtWYjNP5eSpT+56eXBy9PR3bw/r1FBu8FnZ3mUR9JcnZxzL+BME9uyPjXPwyRdnnm9an9wyfGTrSCpcX194iYx8Gn7uEIAS1ftvq0AkguHoGydiX2XUytUAINXqvp3bjhytuTNRmEj/zj2xD9IyXgWiEtX7n2InV9REXjsWffOEqq4F0NjbV9XRCYCEsFraIy8cvo69wLPjTzd73Sa7reP6+AIkJQBVXUeFD8rO/V+1mutGEouJ/lcUOUuaN/ga+9+WzP4A9NgsRf51B+wAAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
 <title>Pantry — meal & grocery planner</title>
 <style>
   :root{
@@ -25,7 +32,9 @@
   html,body{margin:0;padding:0}
   body{
     font-family:var(--sans); color:var(--ink); background:var(--canvas);
-    -webkit-font-smoothing:antialiased; line-height:1.45; padding-bottom:84px;
+    -webkit-font-smoothing:antialiased; line-height:1.45;
+    display:flex; flex-direction:column;
+    height:100vh; height:100dvh; overflow:hidden;   /* app shell — page itself doesn't scroll */
   }
   .num{font-family:var(--mono); font-variant-numeric:tabular-nums; font-feature-settings:"tnum"}
   button{font-family:inherit; cursor:pointer}
@@ -36,15 +45,15 @@
   /* Header */
   header{
     background:var(--surface); border-bottom:1px solid var(--border);
-    padding:14px 18px; position:sticky; top:0; z-index:20;
+    padding:calc(14px + env(safe-area-inset-top)) 18px 14px; z-index:20; flex:0 0 auto;
   }
   .head-row{display:flex; align-items:center; gap:12px; max-width:760px; margin:0 auto}
   .brand{display:flex; align-items:baseline; gap:9px}
   .brand .mark{
-    width:26px;height:26px;border-radius:7px;background:var(--primary);
-    display:inline-flex;align-items:center;justify-content:center;color:#fff;
-    font-weight:800;font-size:15px; transform:translateY(3px);
+    width:30px;height:30px;border-radius:8px;background:#000;overflow:hidden;
+    display:inline-flex;align-items:center;justify-content:center; transform:translateY(4px);
   }
+  .brand .mark img{width:100%;height:100%;object-fit:cover;display:block}
   .brand h1{font-size:19px; letter-spacing:-.01em; font-weight:750}
   .brand .sub{font-size:11px; color:var(--muted); font-weight:600; letter-spacing:.04em; text-transform:uppercase}
   .head-spacer{flex:1}
@@ -55,11 +64,12 @@
   .budget-chip .lab{font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.05em; font-weight:700}
   .budget-chip .val{font-size:15px; font-weight:700}
 
-  main{max-width:760px; margin:0 auto; padding:18px 16px 40px}
+  main{flex:1 1 auto; overflow-y:auto; -webkit-overflow-scrolling:touch; overscroll-behavior:contain; padding:18px 16px 36px}
+  main > *{max-width:760px; margin-left:auto; margin-right:auto}
 
-  /* Tab bar (bottom on mobile, persistent) */
+  /* Tab bar (always pinned at the bottom of the app shell) */
   nav.tabs{
-    position:fixed; bottom:0; left:0; right:0; z-index:30;
+    flex:0 0 auto; z-index:30;
     background:var(--surface); border-top:1px solid var(--border);
     display:flex; justify-content:center; gap:2px; padding:6px 8px calc(6px + env(safe-area-inset-bottom));
   }
@@ -136,12 +146,12 @@
 
   /* Modal */
   .scrim{position:fixed; inset:0; background:rgba(27,35,26,.42); z-index:50; display:flex; align-items:flex-end; justify-content:center; padding:0}
-  .modal{background:var(--surface); width:100%; max-width:560px; max-height:92vh; overflow:auto; border-radius:18px 18px 0 0; padding:20px 18px calc(20px + env(safe-area-inset-bottom))}
+  .modal{background:var(--surface); width:100%; max-width:560px; max-height:92vh; max-height:92dvh; overflow:auto; border-radius:18px 18px 0 0; padding:20px 18px calc(20px + env(safe-area-inset-bottom))}
   .modal-head{display:flex; align-items:center; gap:10px; margin-bottom:16px}
   .modal-head h3{font-size:17px; font-weight:750; flex:1}
   @media(min-width:620px){
     .scrim{align-items:center}
-    .modal{border-radius:18px; max-height:88vh}
+    .modal{border-radius:18px; max-height:88vh; max-height:88dvh}
   }
 
   /* Ingredient editor rows */
@@ -201,7 +211,7 @@
   .right{margin-left:auto}
   .muted{color:var(--muted)}
   .danger-link{background:none;border:0;color:var(--danger);font-size:13px;font-weight:600;padding:6px 0}
-  .toast{position:fixed; bottom:96px; left:50%; transform:translateX(-50%); background:var(--ink); color:var(--canvas); padding:10px 16px; border-radius:10px; font-size:13.5px; font-weight:600; z-index:80; box-shadow:var(--shadow); opacity:0; transition:opacity .2s, transform .2s; pointer-events:none}
+  .toast{position:fixed; bottom:calc(86px + env(safe-area-inset-bottom)); left:50%; transform:translateX(-50%); background:var(--ink); color:var(--canvas); padding:10px 16px; border-radius:10px; font-size:13.5px; font-weight:600; z-index:80; box-shadow:var(--shadow); opacity:0; transition:opacity .2s, transform .2s; pointer-events:none}
   .toast.show{opacity:1; transform:translateX(-50%) translateY(-4px)}
   .daynav{display:flex; align-items:center; gap:12px; margin-bottom:14px}
   .daynav .icon-btn{width:40px; height:40px; font-size:22px}
@@ -233,6 +243,14 @@
   .unit-toggle button{border:0; background:var(--surface); color:var(--muted); padding:3px 9px}
   .unit-toggle button.on{background:var(--primary); color:#fff}
   .basis-chip{display:inline-flex; align-items:center; justify-content:center; padding:0 12px; border:1px solid var(--border-strong); border-radius:9px; background:var(--canvas); color:var(--muted); font-weight:650; font-size:13px; white-space:nowrap}
+  .starbtn{border:0; background:none; color:var(--border-strong); font-size:18px; line-height:1; cursor:pointer; padding:0; flex:0 0 auto}
+  .starbtn.on{color:#F5B301}
+  .starbtn:hover{color:#F5B301}
+  .favchip{border:1px solid var(--border-strong); background:var(--surface); color:var(--muted); border-radius:999px; padding:6px 14px; font-size:13px; font-weight:650; cursor:pointer; white-space:nowrap}
+  .favchip.on{background:#FEF3D6; border-color:#F5B301; color:#9A6B00}
+  :root[data-theme="dark"] .favchip.on{background:#3A2E10; color:#F5C547}
+  .btn.danger{background:var(--danger); border-color:var(--danger); color:#fff}
+  .btn.danger:hover{filter:brightness(.94)}
   @media (prefers-reduced-motion: reduce){*{transition:none !important}}
 </style>
 
@@ -240,7 +258,7 @@
   <div class="head-row">
     <button class="cog" id="settingsBtn" title="Settings" aria-label="Settings">⚙️</button>
     <div class="brand">
-      <span class="mark">P</span>
+      <span class="mark"><img src="data:image/png;base64,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" alt="Pantry logo"></span>
       <div>
         <h1>Pantry</h1>
         <div class="sub">Meal & grocery planner</div>
@@ -286,9 +304,10 @@ const MEALTYPES = ['Dinner','Lunch','Breakfast','Snack'];
 /* ---------------- Seed data (real-ish current Coles AUD; all editable) ---------------- */
 const SEED = {
   budget: 150,
-  settings: {dark:false, energyUnit:'kcal'},
+  settings: {dark:false, energyUnit:'kcal', weightUnit:'kg'},
   targets: {kcal:2000, p:150, c:200, f:65},
   log: {},
+  weights: [],
   // nutri values are per `nutriBasis` of the base unit (g / ml / item). Default basis 100 (weight/volume) or 1 (count). All editable.
   pantry: [
     // Meat & seafood
@@ -423,6 +442,8 @@ async function load(){
   S.settings = S.settings || {};
   if(S.settings.dark==null) S.settings.dark = false;
   if(!S.settings.energyUnit) S.settings.energyUnit = 'kcal';
+  if(!S.settings.weightUnit) S.settings.weightUnit = 'kg';
+  S.weights = S.weights || [];
   // every pantry item gets a nutrition basis (amount the macros are quoted per)
   S.pantry.forEach(p=>{ if(p.nutriBasis==null) p.nutriBasis = familyOf(p.unit)==='count' ? 1 : 100; });
   // plan entries can now be meals, single pantry foods, or quick custom items.
@@ -449,6 +470,11 @@ const meal = mid => S.meals.find(m=>m.id===mid);
 const KJ_PER_KCAL = 4.184;
 function applyTheme(){ document.documentElement.dataset.theme = (S.settings && S.settings.dark) ? 'dark' : ''; }
 function energyUnit(){ return (S.settings && S.settings.energyUnit) || 'kcal'; }
+const LB_PER_KG = 2.2046226218;
+function weightUnit(){ return (S.settings && S.settings.weightUnit) || 'kg'; }
+function kgToDisp(kg){ return weightUnit()==='lb' ? kg*LB_PER_KG : kg; }
+function dispToKg(v){ return weightUnit()==='lb' ? v/LB_PER_KG : v; }
+function wfmt(kg){ return (Math.round(kgToDisp(kg)*10)/10).toFixed(1); }
 function toDisp(kcal){ return energyUnit()==='kJ' ? kcal*KJ_PER_KCAL : kcal; }   // kcal -> displayed value
 function fromDisp(v){ return energyUnit()==='kJ' ? v/KJ_PER_KCAL : v; }            // displayed value -> kcal
 function energyStr(kcal){ return Math.round(toDisp(kcal)) + ' ' + energyUnit(); }
@@ -498,7 +524,7 @@ function buildShopping(){
   const need = {}; // pid -> base qty needed
   S.plan.forEach(pl=>{
     const type = pl.type||'meal';
-    if(type==='item'){ if(pl.pid){ need[pl.pid] = (need[pl.pid]||0) + toBase(pl.qty, pl.unit); } return; }
+    if(type==='item'){ if(pl.pid){ need[pl.pid] = (need[pl.pid]||0) + toBase(pl.qty, pl.unit)*(pl.count||1); } return; }
     if(type==='custom'){ return; }   // one-off custom plan items aren't tied to a pantry product
     const m=meal(pl.mealId); if(!m||m.servings<=0) return;
     const scale = pl.servings / m.servings;
@@ -538,6 +564,92 @@ function render(){
 }
 
 function esc(s){return (s==null?'':String(s)).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+/* ---- Weight tracking ---- */
+function fmtShortDate(d){ const dt=new Date(d+'T00:00'); return isNaN(dt)? d : dt.toLocaleDateString(undefined,{day:'numeric',month:'short'}); }
+function weightChartSVG(ws){
+  const W=600,H=230,padL=14,padR=46,padT=16,padB=22;
+  const xs=ws.map(w=>new Date(w.d+'T00:00').getTime());
+  const minX=Math.min(...xs),maxX=Math.max(...xs);
+  const ys=ws.map(w=>kgToDisp(w.kg));
+  let minY=Math.min(...ys),maxY=Math.max(...ys);
+  if(minY===maxY){ minY-=1; maxY+=1; }
+  const pad=(maxY-minY)*0.18; minY-=pad; maxY+=pad;
+  const pw=W-padL-padR, ph=H-padT-padB;
+  const X=t=> (maxX===minX)? padL+pw/2 : padL+(t-minX)/(maxX-minX)*pw;
+  const Y=v=> padT+(1-(v-minY)/(maxY-minY))*ph;
+  const P=ws.map((w,i)=>({x:X(xs[i]),y:Y(ys[i])}));
+  const line=P.map((p,i)=>(i?'L':'M')+p.x.toFixed(1)+' '+p.y.toFixed(1)).join(' ');
+  const area=`M${P[0].x.toFixed(1)} ${(padT+ph).toFixed(1)} `+P.map(p=>'L'+p.x.toFixed(1)+' '+p.y.toFixed(1)).join(' ')+` L${P[P.length-1].x.toFixed(1)} ${(padT+ph).toFixed(1)} Z`;
+  const gMax=(Math.round(maxY*10)/10).toFixed(1), gMin=(Math.round(minY*10)/10).toFixed(1);
+  const dots=P.map(p=>`<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="4" fill="var(--surface)" stroke="#2BA0DC" stroke-width="2.5"/>`).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" style="display:block;height:auto">
+    <defs>
+      <linearGradient id="wline" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1E86C7"/><stop offset="1" stop-color="#5BD0F2"/></linearGradient>
+      <linearGradient id="warea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2BA0DC" stop-opacity="0.30"/><stop offset="1" stop-color="#2BA0DC" stop-opacity="0"/></linearGradient>
+    </defs>
+    <line x1="${padL}" y1="${padT}" x2="${W-padR}" y2="${padT}" stroke="var(--border)" stroke-width="1"/>
+    <line x1="${padL}" y1="${(padT+ph).toFixed(1)}" x2="${W-padR}" y2="${(padT+ph).toFixed(1)}" stroke="var(--border)" stroke-width="1"/>
+    <text x="${W-padR+6}" y="${padT+4}" font-size="13" fill="var(--muted)" font-weight="600">${gMax}</text>
+    <text x="${W-padR+6}" y="${(padT+ph).toFixed(1)}" font-size="13" fill="var(--muted)" font-weight="600">${gMin}</text>
+    ${P.length>1?`<path d="${area}" fill="url(#warea)"/>`:''}
+    ${P.length>1?`<path d="${line}" fill="none" stroke="url(#wline)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>`:''}
+    ${dots}
+  </svg>`;
+}
+function renderWeightSection(){
+  const u=weightUnit();
+  const ws=(S.weights||[]).slice().sort((a,b)=> a.d<b.d?-1:1);
+  let html=`<div class="hr"></div><div class="section-title"><h2>Weight</h2><span class="grow"></span>`
+    +`<span class="unit-toggle" id="wUnit"><button data-wu="kg" class="${u==='kg'?'on':''}">kg</button><button data-wu="lb" class="${u==='lb'?'on':''}">lb</button></span>`
+    +`<button class="btn tiny" id="logWeight" style="margin-left:8px">+ Log</button></div>`;
+  if(!ws.length){
+    html+=`<div class="card empty"><div class="big">⚖️</div><p>No weigh-ins yet. Log your weight to start tracking your trend over time.</p><button class="btn" id="logWeight2">+ Log your weight</button></div>`;
+    return html;
+  }
+  const latest=ws[ws.length-1], first=ws[0];
+  const diff=latest.kg-first.kg;
+  const diffDisp=(Math.round(kgToDisp(Math.abs(diff))*10)/10).toFixed(1);
+  const arrow=diff>0.0005?'▲':(diff<-0.0005?'▼':'•');
+  const diffColor=diff>0.0005?'var(--danger)':(diff<-0.0005?'#1FA971':'var(--muted)');
+  html+=`<div class="card" style="padding:16px">
+    <div style="display:flex;align-items:baseline;gap:10px">
+      <div class="num" style="font-size:30px;font-weight:800;letter-spacing:-.02em">${wfmt(latest.kg)}<span style="font-size:15px;font-weight:600;color:var(--muted)"> ${u}</span></div>
+      ${ws.length>1?`<div class="num" style="font-size:13px;font-weight:750;color:${diffColor}">${arrow} ${diffDisp} ${u}</div>`:''}
+    </div>
+    <div class="muted" style="font-size:12px;margin:2px 0 12px">Latest · ${fmtShortDate(latest.d)}${ws.length>1?` · ${ws.length} weigh-ins`:''}</div>
+    ${weightChartSVG(ws)}
+  </div>`;
+  html+=`<div class="card" style="margin-top:10px;padding:2px 0">`;
+  ws.slice().reverse().slice(0,8).forEach(w=>{
+    html+=`<div style="display:flex;align-items:center;gap:10px;padding:9px 14px;border-bottom:1px solid var(--border)">
+      <span class="num grow" style="font-weight:700">${wfmt(w.kg)} ${u}</span>
+      <span class="muted num" style="font-size:12.5px">${fmtShortDate(w.d)}</span>
+      <button class="icon-btn danger" data-wdel="${w.d}" title="Remove">✕</button>
+    </div>`;
+  });
+  html+=`</div>`;
+  return html;
+}
+function openWeightLog(){
+  const u=weightUnit();
+  const ws=(S.weights||[]).slice().sort((a,b)=> a.d<b.d?-1:1);
+  const prefill = ws.length? wfmt(ws[ws.length-1].kg) : '';
+  showModal('Log weight', `
+    <label class="field"><span class="lab">Weight (${u})</span><input type="number" id="wVal" min="0" step="any" inputmode="decimal" value="${prefill}" placeholder="e.g. ${u==='kg'?'72.5':'160'}"></label>
+    <label class="field"><span class="lab">Date</span><input type="date" id="wDate" value="${todayKey()}" max="${todayKey()}"></label>
+    <div style="display:flex;gap:10px;margin-top:14px"><button class="btn subtle" id="wCancel" style="flex:1">Cancel</button><button class="btn" id="wSave" style="flex:2">Save</button></div>`);
+  setTimeout(()=>{ const el=$id('wVal'); if(el) el.focus(); },60);
+  $id('wCancel').addEventListener('click',closeModal);
+  $id('wSave').addEventListener('click',()=>{
+    const v=parseFloat($id('wVal').value); if(!(v>0)){ toast('Enter a weight'); return; }
+    const d=$id('wDate').value || todayKey();
+    S.weights=(S.weights||[]).filter(w=>w.d!==d);   // one entry per day (upsert)
+    S.weights.push({d, kg:dispToKg(v)});
+    S.weights.sort((a,b)=> a.d<b.d?-1:1);
+    save(); closeModal(); render(); toast('Weight logged');
+  });
+}
 
 /* ---- PLAN tab ---- */
 function renderPlan(){
@@ -589,11 +701,17 @@ function renderPlan(){
         </div>`;
       } else {
         const tag = type==='item' ? 'food' : 'item';
+        const n = pl.count||1;
         html += `
         <div class="planrow">
           <div class="grow">
             <div class="pn">${esc(entryName(pl))} <span class="pill cat" style="font-size:10px">${tag}</span></div>
-            <div class="pm">${esc(entryDetail(pl))} · <span class="num">${money(entryCost(pl))}</span></div>
+            <div class="pm">${esc(entryDetail(pl))}${n>1?` × ${n}`:''} · <span class="num">${money(entryCost(pl))}</span></div>
+          </div>
+          <div class="stepper" data-idx="${idx}">
+            <button data-act="dec">−</button>
+            <span class="n num">${n}</span>
+            <button data-act="inc">+</button>
           </div>
           <button class="icon-btn" data-editplan="${idx}" title="Edit">✎</button>
           <button class="icon-btn danger" data-rmplan="${idx}" title="Remove">✕</button>
@@ -604,17 +722,11 @@ function renderPlan(){
     html += `<div style="margin-top:14px;text-align:center"><button class="btn ghost" id="goShop">View shopping list →</button></div>`;
   }
 
-  // Cheapest meals insight
-  if(S.meals.length){
-    const ranked = clone(S.meals).map(m=>({name:m.name, cps:mealPerServing(m)})).filter(x=>x.cps>0).sort((a,b)=>a.cps-b.cps).slice(0,3);
-    if(ranked.length){
-      html += `<div class="hr"></div><div class="section-title"><h2>💡 Cheapest per serving</h2></div><div class="card" style="padding:6px 16px">`;
-      ranked.forEach(r=>{ html += `<div class="rline"><span class="name">${esc(r.name)}</span><span class="lead"></span><span class="amt num">${money(r.cps)}</span></div>`; });
-      html += `</div>`;
-    }
-  }
+  html += renderWeightSection();
 
-  html += `<div class="note">ℹ️ <div><b>Prices and macros are starting estimates</b> (typical Coles, mid-2026). Supermarkets don't allow live price feeds, so tweak any item in the Pantry tab — set its pack size, price, nutrition amount (per 100 g, per serve, kcal or kJ) and everything recalculates instantly.</div></div>`;
+  if(!S.settings.hideEstimateNote){
+    html += `<div class="note">ℹ️ <div><b>Prices and macros are starting estimates</b> (typical Coles, mid-2026). Supermarkets don't allow live price feeds, so tweak any item in the Pantry tab — set its pack size, price, nutrition amount (per 100 g, per serve, kcal or kJ) and everything recalculates instantly.<div style="margin-top:10px"><button class="btn tiny" id="dismissNote">OK, got it</button></div></div></div>`;
+  }
   html += `<div style="text-align:center"><button class="danger-link" id="resetBtn">Reset all data</button> · <button class="danger-link" id="exportBtn" style="color:var(--muted)">Export / import</button></div>`;
 
   $view.innerHTML = html;
@@ -623,12 +735,17 @@ function renderPlan(){
   on('#addItemToPlan','click',()=>openPlanPicker('food'));
   on('#goShop','click',()=>{TAB='shop';render()});
   on('#resetBtn','click',confirmReset);
+  on('#dismissNote','click',()=>{ S.settings.hideEstimateNote=true; save(); render(); });
   on('#exportBtn','click',openExport);
+  on('#logWeight,#logWeight2','click',openWeightLog);
+  $view.querySelectorAll('#wUnit [data-wu]').forEach(b=>b.addEventListener('click',()=>{ S.settings.weightUnit=b.dataset.wu; save(); render(); }));
+  $view.querySelectorAll('[data-wdel]').forEach(b=>b.addEventListener('click',()=>{ const d=b.dataset.wdel; S.weights=(S.weights||[]).filter(w=>w.d!==d); save(); render(); }));
   $view.querySelectorAll('.stepper').forEach(st=>{
     const idx=+st.dataset.idx;
     st.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
-      const act=b.dataset.act;
-      S.plan[idx].servings = Math.max(1, S.plan[idx].servings + (act==='inc'?1:-1));
+      const act=b.dataset.act, e=S.plan[idx]; if(!e) return;
+      const field = (e.type==='meal'||!e.type) ? 'servings' : 'count';
+      e[field] = Math.max(1, (e[field]||1) + (act==='inc'?1:-1));
       save(); render();
     }));
   });
@@ -650,16 +767,23 @@ function openPlanPicker(initial){
   showModal('Add to this week', body);
 
   const bodyEl = ()=>document.getElementById('planPickBody');
+  let favOnly=false;
   function paneMeal(){
+    const favBtn = `<div style="margin-bottom:10px"><button class="favchip ${favOnly?'on':''}" id="planFav">${favOnly?'★':'☆'} Favourites</button></div>`;
+    const wireFav=()=>{ const fb=document.getElementById('planFav'); if(fb) fb.addEventListener('click',()=>{ favOnly=!favOnly; paneMeal(); }); };
     if(S.meals.length===0){
       bodyEl().innerHTML = `<div class="card empty" style="box-shadow:none"><p>No meals yet. Create one in the Meals tab, or add a single food / quick item instead.</p></div>`;
       return;
     }
-    bodyEl().innerHTML = `<div class="card" style="box-shadow:none">`+S.meals.map(m=>`
-      <div class="planrow" style="cursor:pointer" data-pickmeal="${m.id}">
-        <div class="grow"><div class="pn">${esc(m.name)}</div><div class="pm"><span class="pill cat">${esc(m.type)}</span> <span class="num">${money(mealPerServing(m))}</span>/serving · makes ${m.servings}</div></div>
-        <span class="btn tiny">Add</span>
-      </div>`).join('')+`</div>`;
+    const list = favOnly ? S.meals.filter(m=>m.fav) : S.meals;
+    bodyEl().innerHTML = favBtn + (list.length
+      ? `<div class="card" style="box-shadow:none">`+list.map(m=>`
+        <div class="planrow" style="cursor:pointer" data-pickmeal="${m.id}">
+          <div class="grow"><div class="pn">${m.fav?'★ ':''}${esc(m.name)}</div><div class="pm"><span class="pill cat">${esc(m.type)}</span> <span class="num">${money(mealPerServing(m))}</span>/serving · makes ${m.servings}</div></div>
+          <span class="btn tiny">Add</span>
+        </div>`).join('')+`</div>`
+      : `<div class="card empty" style="box-shadow:none"><p>No favourite meals yet — tap the ☆ on a meal in the Meals tab.</p></div>`);
+    wireFav();
     bodyEl().querySelectorAll('[data-pickmeal]').forEach(el=>el.addEventListener('click',()=>{
       const m=meal(el.dataset.pickmeal);
       S.plan.push({type:'meal', mealId:m.id, servings:m.servings}); save(); closeModal(); render();
@@ -667,24 +791,26 @@ function openPlanPicker(initial){
   }
   function paneFood(){
     bodyEl().innerHTML = `
-      <input type="text" id="planFoodSearch" placeholder="🔍  Search your pantry…" autocomplete="off">
+      <div style="display:flex;gap:8px;align-items:center"><input type="text" id="planFoodSearch" placeholder="🔍  Search your pantry…" autocomplete="off" style="flex:1"><button class="favchip ${favOnly?'on':''}" id="planFoodFav">${favOnly?'★':'☆'} Fav</button></div>
       <div id="planFoodResults" class="card" style="box-shadow:none;margin-top:10px;max-height:340px;overflow:auto;padding:4px"></div>`;
     const search=document.getElementById('planFoodSearch');
     const resBox=document.getElementById('planFoodResults');
     const rowHtml=p=>`<div class="planrow" data-pickfood="${p.id}" data-name="${esc(p.name.toLowerCase())}" style="cursor:pointer;padding:9px 10px;border:0">
-        <div class="grow"><div class="pn">${esc(p.name)}</div><div class="pm">${qtyStr(p.size,p.unit)} · <span class="num">${money(p.price)}</span></div></div>
+        <div class="grow"><div class="pn">${p.fav?'★ ':''}${esc(p.name)}</div><div class="pm">${qtyStr(p.size,p.unit)} · <span class="num">${money(p.price)}</span></div></div>
         <span class="btn tiny">Add</span></div>`;
     const draw=()=>{
       const q=search.value.trim().toLowerCase();
-      const list = q ? S.pantry.filter(p=>p.name.toLowerCase().includes(q)) : S.pantry;
-      resBox.innerHTML = list.length ? list.map(rowHtml).join('') : `<div style="padding:14px;color:var(--muted);font-size:13px">No matching pantry items. Add it in the Pantry tab first, or use "Quick item".</div>`;
+      const list = S.pantry.filter(p=> (!q||p.name.toLowerCase().includes(q)) && (!favOnly||p.fav) );
+      resBox.innerHTML = list.length ? list.map(rowHtml).join('') : `<div style="padding:14px;color:var(--muted);font-size:13px">No matching ${favOnly?'favourite ':''}pantry items. ${favOnly?'Tap the ☆ on items in the Pantry tab.':'Add it in the Pantry tab first, or use "Quick item".'}</div>`;
       resBox.querySelectorAll('[data-pickfood]').forEach(el=>el.addEventListener('click',()=>{
         const p=item(el.dataset.pickfood);
         const startQty = p.size>0 ? p.size : (familyOf(p.unit)==='count'?1:100);
-        S.plan.push({type:'item', pid:p.id, qty:startQty, unit:p.unit}); save(); closeModal(); render();
+        S.plan.push({type:'item', pid:p.id, qty:startQty, unit:p.unit, count:1}); save(); closeModal(); render();
       }));
     };
-    search.addEventListener('input',draw); draw();
+    search.addEventListener('input',draw);
+    document.getElementById('planFoodFav').addEventListener('click',()=>{ favOnly=!favOnly; const b=document.getElementById('planFoodFav'); b.classList.toggle('on',favOnly); b.textContent=(favOnly?'★':'☆')+' Fav'; draw(); });
+    draw();
   }
   function paneCustom(){
     bodyEl().innerHTML = `
@@ -709,6 +835,7 @@ function openPlanPicker(initial){
         p:parseFloat(document.getElementById('pcP').value)||0,
         c:parseFloat(document.getElementById('pcC').value)||0,
         f:parseFloat(document.getElementById('pcF').value)||0,
+        count:1,
       });
       save(); closeModal(); render();
     });
@@ -779,13 +906,15 @@ function defaultSlot(){ const h=new Date().getHours(); return h<11?'Breakfast':(
 
 function entryMacros(e){
   if(e.type==='meal'){ const m=meal(e.mealId); if(!m) return {kcal:0,p:0,c:0,f:0}; const pm=mealMacrosPerServing(m); const s=e.servings||1; return {kcal:pm.kcal*s,p:pm.p*s,c:pm.c*s,f:pm.f*s}; }
-  if(e.type==='item'){ return ingMacros({pid:e.pid,qty:e.qty,unit:e.unit}); }
-  return {kcal:e.kcal||0,p:e.p||0,c:e.c||0,f:e.f||0};
+  const n=e.count||1;
+  if(e.type==='item'){ const mm=ingMacros({pid:e.pid,qty:e.qty,unit:e.unit}); return {kcal:mm.kcal*n,p:mm.p*n,c:mm.c*n,f:mm.f*n}; }
+  return {kcal:(e.kcal||0)*n,p:(e.p||0)*n,c:(e.c||0)*n,f:(e.f||0)*n};
 }
 function entryCost(e){
   if(e.type==='meal'){ const m=meal(e.mealId); return m?mealPerServing(m)*(e.servings||1):0; }
-  if(e.type==='item'){ const p=item(e.pid); return p?toBase(e.qty,e.unit)*pricePerBase(p):0; }
-  return e.cost||0;
+  const n=e.count||1;
+  if(e.type==='item'){ const p=item(e.pid); return p?toBase(e.qty,e.unit)*pricePerBase(p)*n:0; }
+  return (e.cost||0)*n;
 }
 function entryName(e){
   if(e.type==='meal'){ const m=meal(e.mealId); return m?m.name:'(deleted meal)'; }
@@ -874,20 +1003,22 @@ function addLogEntry(slot,type,id){
 
 function openLogPicker(slot){
   let body=`<div class="seg-row" id="slotSeg">${SLOTS.map(s=>`<button class="seg ${s===slot?'on':''}" data-slot="${s}">${s}</button>`).join('')}</div>
-    <input type="text" id="logSearch" placeholder="Search meals & foods…" style="margin:12px 0">
+    <div style="display:flex;gap:8px;align-items:center;margin:12px 0"><input type="text" id="logSearch" placeholder="Search meals & foods…" style="flex:1;margin:0"><button class="favchip" id="logFav">☆ Favourites</button></div>
     <div style="display:flex;gap:8px;margin-bottom:4px"><button class="btn ghost tiny" id="logCustom">+ Custom entry</button><button class="btn ghost tiny" id="logNewFood">+ New food</button></div>
     <div id="logList">`;
   if(S.meals.length){
     body+=`<div class="pill cat" style="margin:10px 0 4px">Your meals</div>`;
-    S.meals.forEach(m=>{ const pm=mealMacrosPerServing(m); body+=`<div class="planrow logpick" data-type="meal" data-id="${m.id}" data-name="${esc(m.name.toLowerCase())}" style="cursor:pointer"><div class="grow"><div class="pn">${esc(m.name)}</div><div class="pm num">${energyStr(pm.kcal)} · ${Math.round(pm.p)}g P / serving</div></div><span class="btn tiny">Add</span></div>`; });
+    S.meals.forEach(m=>{ const pm=mealMacrosPerServing(m); body+=`<div class="planrow logpick" data-type="meal" data-id="${m.id}" data-fav="${m.fav?1:0}" data-name="${esc(m.name.toLowerCase())}" style="cursor:pointer"><div class="grow"><div class="pn">${m.fav?'★ ':''}${esc(m.name)}</div><div class="pm num">${energyStr(pm.kcal)} · ${Math.round(pm.p)}g P / serving</div></div><span class="btn tiny">Add</span></div>`; });
   }
   body+=`<div class="pill cat" style="margin:12px 0 4px">Foods</div>`;
-  S.pantry.forEach(p=>{ const kc=p.nutri?p.nutri.kcal:0; body+=`<div class="planrow logpick" data-type="item" data-id="${p.id}" data-name="${esc(p.name.toLowerCase())}" style="cursor:pointer"><div class="grow"><div class="pn">${esc(p.name)}</div><div class="pm num">${energyStr(kc)} ${nutriBasisShort(p)}</div></div><span class="btn tiny">Add</span></div>`; });
+  S.pantry.forEach(p=>{ const kc=p.nutri?p.nutri.kcal:0; body+=`<div class="planrow logpick" data-type="item" data-id="${p.id}" data-fav="${p.fav?1:0}" data-name="${esc(p.name.toLowerCase())}" style="cursor:pointer"><div class="grow"><div class="pn">${p.fav?'★ ':''}${esc(p.name)}</div><div class="pm num">${energyStr(kc)} ${nutriBasisShort(p)}</div></div><span class="btn tiny">Add</span></div>`; });
   body+=`</div><div style="margin-top:14px"><button class="btn" id="logDone" style="width:100%">Done</button></div>`;
   showModal('Log to '+slot, body);
-  let cur=slot;
+  let cur=slot, favOnly=false;
+  const applyLog=()=>{ const q=(document.getElementById('logSearch').value||'').toLowerCase(); $modalQ('.logpick').forEach(el=>{ const okQ=el.dataset.name.includes(q); const okF=!favOnly||el.dataset.fav==='1'; el.style.display=(okQ&&okF)?'':'none'; }); };
   $modalQ('[data-slot]').forEach(b=>b.addEventListener('click',()=>{ cur=b.dataset.slot; $modalQ('[data-slot]').forEach(x=>x.classList.toggle('on',x.dataset.slot===cur)); const h=document.querySelector('.modal-head h3'); if(h) h.textContent='Log to '+cur; }));
-  document.getElementById('logSearch').addEventListener('input',e=>{ const q=e.target.value.toLowerCase(); $modalQ('.logpick').forEach(el=>{ el.style.display=el.dataset.name.includes(q)?'':'none'; }); });
+  document.getElementById('logSearch').addEventListener('input',applyLog);
+  document.getElementById('logFav').addEventListener('click',()=>{ favOnly=!favOnly; const b=document.getElementById('logFav'); b.classList.toggle('on',favOnly); b.textContent=(favOnly?'★':'☆')+' Favourites'; applyLog(); });
   $modalQ('.logpick').forEach(el=>el.addEventListener('click',()=>{ addLogEntry(cur, el.dataset.type, el.dataset.id); toast('Added to '+cur); }));
   document.getElementById('logCustom').addEventListener('click',()=>openCustomEntry(cur));
   document.getElementById('logNewFood').addEventListener('click',()=>openPantryEditor(null,()=>{ closeModal(); openLogPicker(cur); }));
@@ -965,7 +1096,7 @@ function renderMeals(){
       <div class="card meal">
         <div class="meal-top">
           <div class="grow">
-            <div class="meal-name">${esc(m.name)}</div>
+            <div class="meal-name"><button class="starbtn ${m.fav?'on':''}" data-favmeal="${m.id}" title="Favourite" aria-label="Favourite">${m.fav?'★':'☆'}</button> ${esc(m.name)}</div>
             <div class="meal-meta"><span class="pill cat">${esc(m.type)}</span> &nbsp;${(m.ings||[]).length} ingredient${(m.ings||[]).length!==1?'s':''} · makes ${m.servings} · ${money(total)} total</div>
           </div>
           <div class="cps"><div class="v num">${money(cps)}</div><div class="l">/ serving</div></div>
@@ -982,14 +1113,15 @@ function renderMeals(){
   }
   $view.innerHTML = html;
   on('#newMeal,#newMeal2','click',()=>openMealEditor(null));
+  $view.querySelectorAll('[data-favmeal]').forEach(b=>b.addEventListener('click',e=>{ e.stopPropagation(); const m=meal(b.dataset.favmeal); m.fav=!m.fav; save(); render(); }));
   $view.querySelectorAll('[data-editmeal]').forEach(b=>b.addEventListener('click',()=>openMealEditor(b.dataset.editmeal)));
   $view.querySelectorAll('[data-delmeal]').forEach(b=>b.addEventListener('click',()=>{
-    const m=meal(b.dataset.delmeal);
-    if(confirm('Delete "'+m.name+'"? This also removes it from your week.')){
+    const m=meal(b.dataset.delmeal); if(!m) return;
+    showConfirm({title:'Delete meal?', message:'Delete "'+esc(m.name)+'"? This also removes it from your week.', yes:'Delete', danger:true, onYes:()=>{
       S.meals=S.meals.filter(x=>x.id!==m.id);
       S.plan=S.plan.filter(p=>p.mealId!==m.id);
       save(); render();
-    }
+    }});
   }));
   $view.querySelectorAll('[data-dupmeal]').forEach(b=>b.addEventListener('click',()=>{
     const m=clone(meal(b.dataset.dupmeal)); m.id=uid(); m.name=m.name+' (copy)';
@@ -1120,7 +1252,7 @@ function addIngToDraft(pid){
 
 /* ---- PANTRY tab ---- */
 function renderPantry(){
-  let html = `<div class="section-title"><h2>Pantry & prices</h2><span class="count">${S.pantry.length} items</span><span class="grow"></span><button class="btn tiny" id="newItem">+ Add item</button></div>`;
+  let html = `<div class="section-title"><h2>Pantry & prices</h2><span class="count">${S.pantry.length} items</span><span class="grow"></span><button class="btn tiny ghost" id="scanItem" title="Scan a barcode" aria-label="Scan a barcode" style="margin-right:6px;padding:5px 9px"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px"><path d="M3 8V6a2 2 0 0 1 2-2h2M17 4h2a2 2 0 0 1 2 2v2M21 16v2a2 2 0 0 1-2 2h-2M7 20H5a2 2 0 0 1-2-2v-2M3 12h18"/></svg></button><button class="btn tiny" id="newItem">+ Add item</button></div>`;
   if(S.pantry.length===0){
     html+=`<div class="card empty"><div class="big">🏷️</div><p>Your pantry is empty. Add the groceries you buy with their pack size, price and (optionally) macros.</p><button class="btn" id="newItem2">+ Add an item</button></div>`;
     $view.innerHTML=html;
@@ -1140,6 +1272,7 @@ function renderPantry(){
       const onHand = p.onHand>0 ? `· ${qtyStr(p.onHand,p.unit)} on hand` : '';
       const kc = (p.nutri&&p.nutri.kcal>0) ? `· ${energyStr(p.nutri.kcal)}${nutriBasisShort(p)}` : '';
       html+=`<div class="pitem" data-name="${esc(p.name.toLowerCase())}">
+        <button class="starbtn ${p.fav?'on':''}" data-favitem="${p.id}" title="Favourite" aria-label="Favourite">${p.fav?'★':'☆'}</button>
         <div class="grow">
           <div class="pname">${esc(p.name)}</div>
           <div class="pmeta">${qtyStr(p.size,p.unit)} pack ${onHand} ${kc}</div>
@@ -1153,7 +1286,9 @@ function renderPantry(){
   html+=`<div id="pEmpty" class="card empty" style="display:none"><div class="big">🔍</div><p>No items match that search.</p></div>`;
   $view.innerHTML=html;
   on('#newItem','click',()=>openPantryEditor(null));
+  on('#scanItem','click',openBarcodeScanner);
   $view.querySelectorAll('[data-editp]').forEach(b=>b.addEventListener('click',()=>openPantryEditor(b.dataset.editp)));
+  $view.querySelectorAll('[data-favitem]').forEach(b=>b.addEventListener('click',e=>{ e.stopPropagation(); const p=item(b.dataset.favitem); p.fav=!p.fav; save(); render(); }));
   // filter in place — no re-render, so the cursor stays in the box
   document.getElementById('pSearch').addEventListener('input',e=>{
     const q=e.target.value.toLowerCase(); let anyVisible=false;
@@ -1183,17 +1318,23 @@ function offParseQuantity(q){
 function offNormalize(prod){
   const nut = prod.nutriments||{};
   let kcal = offNum(nut['energy-kcal_100g']);
-  if(kcal==null){ const kj = offNum(nut['energy-kj_100g']) ?? offNum(nut['energy_100g']); if(kj!=null) kcal = kj/KJ_PER_KCAL; }
+  let kj = offNum(nut['energy-kj_100g']) ?? offNum(nut['energy_100g']);
+  if(kcal==null && kj!=null) kcal = kj/KJ_PER_KCAL;
+  if(kj==null && kcal!=null) kj = kcal*KJ_PER_KCAL;
   const q = offParseQuantity(prod.quantity);
-  return {
-    name: (prod.product_name||'').trim(),
+  const name = (prod.product_name||'').trim();
+  const out = {
+    name,
     brand: (prod.brands||'').split(',')[0].trim(),
-    kcal: kcal||0,
     p: offNum(nut.proteins_100g)||0,
     c: offNum(nut.carbohydrates_100g)||0,
     f: offNum(nut.fat_100g)||0,
-    size: q.size, unit: q.unit,
+    basisAmt: 100,
+    packSize: q.size, packUnit: q.unit,
   };
+  if(kcal!=null) out.kcal=kcal;
+  if(kj!=null) out.kj=kj;
+  return out;
 }
 async function offSearchFetch(query){
   const url = 'https://world.openfoodfacts.org/cgi/search.pl?search_terms='+encodeURIComponent(query)
@@ -1202,6 +1343,65 @@ async function offSearchFetch(query){
   if(!res.ok) throw new Error('http '+res.status);
   const data = await res.json();
   return (data.products||[]).map(offNormalize).filter(x=>x.name);
+}
+async function offFetchByBarcode(code){
+  const url='https://world.openfoodfacts.org/api/v2/product/'+encodeURIComponent(code)+'.json?fields=product_name,brands,quantity,nutriments';
+  const res=await fetch(url); if(!res.ok) throw new Error('http'); const data=await res.json();
+  if(data.status!==1 || !data.product) return null;
+  return offNormalize(data.product);
+}
+
+/* ---- Barcode scanner ----
+   Reads a product barcode with the camera (via the ZXing library, loaded from a
+   CDN) and looks it up on Open Food Facts. Needs a camera + internet, so it runs
+   on the hosted site / phone, not inside the Claude preview. Fails gracefully. */
+let zxingPromise=null;
+function loadZXing(){
+  if(window.ZXing) return Promise.resolve(window.ZXing);
+  if(zxingPromise) return zxingPromise;
+  zxingPromise=new Promise((resolve,reject)=>{
+    const sc=document.createElement('script');
+    sc.src='https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js';
+    sc.onload=()=> window.ZXing ? resolve(window.ZXing) : reject(new Error('zxing'));
+    sc.onerror=()=>reject(new Error('load'));
+    document.head.appendChild(sc);
+  });
+  return zxingPromise;
+}
+function openBarcodeScanner(){
+  showModal('Scan a barcode', `
+    <p class="muted" style="font-size:13px;margin-top:0">Point your camera at the product barcode. Needs camera access, so it works on your phone or hosted site (not inside the in-app preview).</p>
+    <div style="position:relative;border-radius:12px;overflow:hidden;background:#000;aspect-ratio:4/3"><video id="scanVid" playsinline muted autoplay style="width:100%;height:100%;object-fit:cover"></video></div>
+    <div id="scanStatus" style="font-size:12.5px;color:var(--muted);margin:10px 2px 0;min-height:16px">Starting camera…</div>
+    <div style="margin-top:12px"><button class="btn subtle" id="scanCancel" style="width:100%">Cancel</button></div>`);
+  const video=$id('scanVid'), status=$id('scanStatus');
+  let reader=null, done=false;
+  const cleanup=()=>{ try{ reader && reader.reset && reader.reset(); }catch(e){} const s=video&&video.srcObject; if(s&&s.getTracks) s.getTracks().forEach(t=>t.stop()); };
+  $id('scanCancel').addEventListener('click',()=>{ cleanup(); closeModal(); });
+  (async()=>{
+    let ZX;
+    try{ ZX = await loadZXing(); }
+    catch(e){ status.textContent='Couldn\u2019t load the scanner here — it works on your hosted site / phone. You can add the item by hand instead.'; return; }
+    try{
+      reader=new ZX.BrowserMultiFormatReader();
+      status.textContent='Point at the barcode…';
+      await reader.decodeFromVideoDevice(undefined, video, async (result)=>{
+        if(done || !result) return;
+        done=true;
+        const code = result.getText ? result.getText() : (result.text||String(result));
+        cleanup();
+        status.textContent='Looking up '+code+'…';
+        let food=null; try{ food=await offFetchByBarcode(code); }catch(e){}
+        closeModal();
+        openPantryEditor(null, false, food || {name:''});
+        if(!food) toast('Barcode '+code+' not found — fill it in by hand');
+      });
+    }catch(e){
+      status.textContent = (e && e.name==='NotAllowedError')
+        ? 'Camera permission was blocked — allow it in your browser settings.'
+        : 'Couldn\u2019t start the camera here. Try on your phone or hosted site.';
+    }
+  })();
 }
 function openFoodSearch(onPick){
   showModal('Search Open Food Facts', `
@@ -1240,54 +1440,161 @@ function openFoodSearch(onPick){
    The parser is fully offline. The live mic uses the Web Speech API (works in
    Chrome/Edge and mobile Safari); where it's unavailable — e.g. a home-screen
    PWA on iOS — the editable box lets you dictate with the keyboard's own mic. */
+/* Detects a pasted multi-line nutrition information panel (the AU/NZ NIP with
+   "Per Serving" / "Per 100g" columns) and reads it line by line. Prefers the
+   per-100g column to match the app's per-100 basis, skips %DI lines and
+   untracked rows (saturated fat, sugars, fibre, sodium), and works out the pack
+   size from servings-per-package × serving-size. */
+function looksLikeLabel(raw){
+  const lines = raw.split(/\n/).filter(x=>x.trim()).length;
+  return lines>=4 && /(per\s*100|per\s*serv|%\s*di|servings?\s*per|serving\s*size|energy\s*\()/i.test(raw);
+}
+function parseNutritionLabel(text){
+  const out={};
+  const pm = text.match(/\$\s*(\d+(?:\.\d+)?)/) || text.match(/(\d+(?:\.\d+)?)\s*(?:dollars?|bucks?)\b/i) || text.match(/(?:price|cost)s?\b[:\s]*\$?\s*(\d+(?:\.\d+)?)/i);
+  if(pm) out.price=parseFloat(pm[1]);
+  const lines = text.split(/\n/).map(l=>l.trim()).filter(Boolean);
+  const fieldOf = label=>{
+    const l=label.toLowerCase();
+    if(/%/.test(l)) return null;
+    if(/energy/.test(l) && /kj/.test(l)) return 'KJ';
+    if(/energy/.test(l) && /(cal|calorie)/.test(l)) return 'CAL';
+    if(/protein/.test(l)) return 'PROTEIN';
+    if(/satur|trans|monoun|polyun/.test(l)) return null;   // skip fat sub-rows
+    if(/\bfat\b/.test(l)) return 'FAT';
+    if(/sugar|fibre|fiber|sodium|salt|gluten|cholesterol|calcium|iron|potassium/.test(l)) return null;
+    if(/carbohydrate|carbs/.test(l)) return 'CARB';
+    return null;
+  };
+  const has100 = /per\s*100/i.test(text);
+  const numUnit = s=>{ const m=s.match(/(\d+(?:\.\d+)?)\s*(kg|mg|g|ml|cl|l)?/i); return m?{val:parseFloat(m[1]), unit:(m[2]||'').toLowerCase()}:null; };
+  let servAmt=null, servUnit='', servings=null, current=null;
+  const vals={}; const nameCands=[];
+  for(const l of lines){
+    const low=l.toLowerCase();
+    if(/%/.test(l) || /\bdi\b/.test(low) || /\bri\b/.test(low)) continue;          // %DI / %RI rows
+    if(/^per\s*(serving|serve|100|pack)/i.test(l)) continue;                         // column headers
+    if(/servings?\s*per\s*(package|pack|container|pkg)/i.test(low)){ const m=l.match(/(\d+(?:\.\d+)?)/); if(m) servings=parseFloat(m[1]); current=null; continue; }
+    if(/serving\s*size/i.test(low)){ const nu=numUnit(l.replace(/.*serving\s*size/i,'')); if(nu){ servAmt=nu.val; servUnit=nu.unit; } current=null; continue; }
+    if(/^\(?\s*\d/.test(l)){                                                          // a value line
+      if(current){ const m=l.match(/(\d+(?:\.\d+)?)/); if(m) (vals[current]=vals[current]||[]).push(parseFloat(m[1])); }
+      continue;
+    }
+    const f=fieldOf(l);
+    if(f){ current=f; if(!(f in vals)) vals[f]=[];
+      const nums=l.replace(/^[^0-9]*/,'').match(/\d+(?:\.\d+)?/g);   // values on the same line as the name (combined-column labels)
+      if(nums) nums.forEach(n=>vals[f].push(parseFloat(n)));
+    }
+    else { current=null; if(/[a-z]/i.test(l) && !/fat|protein|carb|energy|sugar|fibre|fiber|sodium|salt|satur|trans|\bkj\b|\bcal\b|kcal|kilojoule|calorie|serving|\bper\b|gluten|cholesterol|calcium|iron|potassium|nutrition|information|panel|quantity|average|typical|ingredient|allergen|\bmade\b|contains|store|manufactured|distributed|\bnet\b|%|\bdi\b/i.test(low)) nameCands.push(l); }
+  }
+  const pick = arr => (arr && arr.length) ? arr[arr.length-1] : null;   // per-100g is the last value listed
+  const kj=pick(vals.KJ), cal=pick(vals.CAL), p=pick(vals.PROTEIN), f=pick(vals.FAT), c=pick(vals.CARB);
+  if(kj!=null) out.kj=kj;
+  if(cal!=null) out.kcal=cal;
+  if(p!=null) out.p=p;
+  if(f!=null) out.f=f;
+  if(c!=null) out.c=c;
+  // basis: prefer the per-100 column; otherwise the serving size
+  if(has100 || (vals.PROTEIN&&vals.PROTEIN.length>1) || servAmt==null){ out.basisAmt=100; out.basisUnit = servUnit==='ml'?'ml':'g'; }
+  else { out.basisAmt=servAmt; out.basisUnit = servUnit==='ml'?'ml':'g'; }
+  // pack size = servings × serving size
+  if(servings>0 && servAmt>0){
+    const u = servUnit==='l'?'L':(['g','kg','ml'].includes(servUnit)?servUnit:'g');
+    out.packSize = Math.round(servings*servAmt*100)/100; out.packUnit = u;
+  }
+  let nm = (nameCands.sort((a,b)=>b.length-a.length)[0] || '');
+  nm = nm.replace(/\$\s*\d+(?:\.\d+)?/g,'').replace(/\b\d+(?:\.\d+)?\s*(?:dollars?|bucks?)\b/ig,'').replace(/\b(?:price|cost)s?\b[:\s]*\$?\s*\d+(?:\.\d+)?/ig,'').replace(/[,:;]+/g,' ').replace(/\s+/g,' ').trim();
+  if(nm) out.name = nm.replace(/\b([a-z])/g,c=>c.toUpperCase());
+  return out;
+}
+
+/* Tokenises the text into numbers, labels (calories, protein, size, …) and
+   plain words, then ties each number to the label right next to it. Everything
+   left over becomes the name. Handles "protein 20" and "20 g protein" and glued
+   forms like "100cal" / "20p" / "1f" / "1carb", labels before or after the
+   number ("size 500g" or "1.6kg pack"), "$11" prices, and keeps "5%" in the name. */
 function parseFoodSpeech(raw){
   if(!raw) return {};
-  let t = ' '+String(raw).toLowerCase()+' ';
-  t = t.replace(/per\s*cent|percent/g,'%')
-       .replace(/grammes?|grams?/g,'g')
-       .replace(/millilitres?|milliliters?|mls\b/g,'ml')
-       .replace(/kilojoules?/g,'kj')
-       .replace(/kilocalories?|calories?|cals?|kcals?/g,'kcal')
-       .replace(/carbohydrates?|carbs?/g,'carb')
-       .replace(/[,;]/g,' ');
+  if(looksLikeLabel(raw)) return parseNutritionLabel(raw);
+  let s = ' '+String(raw).toLowerCase().replace(/[,;]/g,' ').replace(/\s+/g,' ')+' ';
+  s = s.replace(/\bper cent\b|\bpercent\b/g,'%')
+       .replace(/\b(serving size|serve size|per serving|per serve)\b/g,'servingsize')
+       .replace(/\b(pack size|net weight|net wt)\b/g,'packsize');
+
+  const KW = { servingsize:'BASIS', serving:'BASIS', per:'BASIS', basis:'BASIS',
+    packsize:'PACK', pack:'PACK', packet:'PACK', size:'PACK', weight:'PACK',
+    kj:'KJ', kjs:'KJ', kilojoules:'KJ', kilojoule:'KJ',
+    kcal:'CAL', kcals:'CAL', calories:'CAL', calorie:'CAL', cal:'CAL', cals:'CAL', kilocalories:'CAL', kilocalorie:'CAL', energy:'CAL',
+    protein:'PROTEIN', proteins:'PROTEIN', prot:'PROTEIN',
+    carbs:'CARB', carb:'CARB', carbohydrate:'CARB', carbohydrates:'CARB',
+    fat:'FAT', fats:'FAT',
+    price:'PRICE', priced:'PRICE', cost:'PRICE', costs:'PRICE', dollars:'PRICE', dollar:'PRICE', bucks:'PRICE', buck:'PRICE' };
+  const SUF = Object.assign({}, KW, {p:'PROTEIN', f:'FAT', c:'CARB'});   // single-letter macros, only when glued to a number
+  const UNITW = {g:'g',kg:'kg',mg:'mg',ml:'ml',cl:'cl',l:'l',grams:'g',gram:'g',kilograms:'kg',kilogram:'kg',kilos:'kg',kilo:'kg',millilitres:'ml',milliliters:'ml',mls:'ml',litres:'l',liters:'l',litre:'l',liter:'l'};
+  const FILLER = new Set(['of','is','are','a','an','the','and','with','it','its','approx','approximately','about','around','roughly','at','for','each','to','has','have','this','that']);
+
+  const toks=[]; const re=/(\$)?(\d+(?:\.\d+)?)([a-z]+|%)?|[a-z][a-z]*/gi; let m;
+  while((m=re.exec(s))){
+    if(m[2]!=null){
+      const val=parseFloat(m[2]); const price=m[1]==='$'; let suf=(m[3]||'').toLowerCase();
+      if(suf==='%'){ toks.push({t:'num',percent:true,raw:m[2]+'%'}); continue; }
+      toks.push({t:'num',val,unit:'',price,raw:String(m[2])});
+      if(suf){
+        if(UNITW[suf]) toks.push({t:'unit',unit:UNITW[suf]});
+        else if(SUF[suf]) toks.push({t:'kw',kw:SUF[suf],word:suf});
+        else if(!FILLER.has(suf)) toks.push({t:'word',raw:suf});
+      }
+    } else {
+      const w=m[0].toLowerCase();
+      if(UNITW[w]) toks.push({t:'unit',unit:UNITW[w]});
+      else if(KW[w]) toks.push({t:'kw',kw:KW[w],word:w});
+      else if(!FILLER.has(w)) toks.push({t:'word',raw:m[0]});
+    }
+  }
+
+  const F={}; const parts=[]; let pending=null, awaiting=null, unitTarget=null;
+  for(let i=0;i<toks.length;i++){
+    const tk=toks[i];
+    if(tk.t==='num'){
+      if(tk.percent){ parts.push({i,text:tk.raw}); unitTarget=null; continue; }
+      if(tk.price){ if(!F.PRICE) F.PRICE={val:tk.val}; awaiting=null; pending=null; unitTarget=null; continue; }
+      if(awaiting){ if(!F[awaiting.kw]) F[awaiting.kw]={val:tk.val,unit:tk.unit}; unitTarget=F[awaiting.kw]; awaiting=null; pending=null; }
+      else { if(pending) parts.push(pending); pending={i,text:tk.raw,val:tk.val,unit:tk.unit}; unitTarget=pending; }
+    } else if(tk.t==='unit'){
+      if(unitTarget && !unitTarget.unit) unitTarget.unit=tk.unit;
+      unitTarget=null;
+    } else if(tk.t==='kw'){
+      unitTarget=null;
+      if(pending){ if(!F[tk.kw]) F[tk.kw]={val:pending.val,unit:pending.unit}; pending=null; }
+      else { if(awaiting) parts.push(awaiting); awaiting={i,text:tk.word,kw:tk.kw}; }
+    } else {
+      if(pending){ parts.push(pending); pending=null; }
+      if(awaiting){ parts.push(awaiting); awaiting=null; }
+      unitTarget=null; parts.push({i,text:tk.raw});
+    }
+  }
+  if(pending) parts.push(pending);
+  if(awaiting) parts.push(awaiting);
+
   const out={};
-  const num='([0-9]+(?:\\.[0-9]+)?)';
-  const take=(re)=>{ const m=t.match(re); if(m){ t=t.replace(m[0],' '); return m; } return null; };
+  const mapU=u=> u==='l'?'L':(['g','kg','ml'].includes(u)?u:null);
+  if(F.BASIS){ let a=F.BASIS.val,u=F.BASIS.unit; if(u==='kg'){a*=1000;u='g';} else if(u==='l'){a*=1000;u='ml';} out.basisAmt=a; if(u==='g'||u==='ml') out.basisUnit=u; }
+  if(F.PACK){ out.packSize=F.PACK.val; const u=mapU(F.PACK.unit); if(u) out.packUnit=u; }
+  if(F.PRICE) out.price=F.PRICE.val;
+  if(F.KJ) out.kj=F.KJ.val; else if(F.CAL) out.kcal=F.CAL.val;
+  if(F.PROTEIN) out.p=F.PROTEIN.val;
+  if(F.CARB) out.c=F.CARB.val;
+  if(F.FAT) out.f=F.FAT.val;
 
-  let m=take(new RegExp('per\\s*'+num+'\\s*(g|ml)\\b'));               // "per 100 g"
-  if(m){ out.basisAmt=parseFloat(m[1]); out.basisUnit=m[2]; }
-
-  m=take(new RegExp(num+'\\s*kj\\b'));                                  // energy in kJ
-  if(m){ out.kj=parseFloat(m[1]); take(new RegExp(num+'\\s*kcal\\b')); }
-  else { m=take(new RegExp(num+'\\s*kcal\\b')); if(m){ out.kcal=parseFloat(m[1]); } }
-
-  const macro=(key)=>{
-    let mm=take(new RegExp(num+'\\s*g?\\s*(?:of\\s*)?'+key+'\\b'));     // "20 g protein"
-    if(!mm) mm=take(new RegExp(key+'\\s*'+num+'\\s*g?\\b'));            // "protein 20"
-    return mm?parseFloat(mm[1]):null;
-  };
-  let v=macro('protein'); if(v!=null) out.p=v;
-  v=macro('carb');        if(v!=null) out.c=v;
-  v=macro('fat');         if(v!=null) out.f=v;
-
-  m=take(/\$\s*([0-9]+(?:\.[0-9]+)?)/) || take(new RegExp(num+'\\s*(?:dollars?|bucks?)\\b')) || take(new RegExp('(?:costs?|price[d]?)\\s*\\$?\\s*'+num));
-  if(m){ out.price=parseFloat(m[1]); }
-
-  m=take(new RegExp('(?:pack(?:et)?\\s*of\\s*)?'+num+'\\s*(kg|g|ml|l)\\s*(?:pack|packet|bag|tub|bottle|carton|box)\\b'))
-   || take(new RegExp('pack(?:et)?\\s*of\\s*'+num+'\\s*(kg|g|ml|l)\\b'));
-  if(m){ let u=m[2]; if(u==='l') u='L'; out.packSize=parseFloat(m[1]); out.packUnit=u; }
-
-  let name = t.replace(/\b(of|with|its|it'?s|this is|that's|a|an|the|and|has|have|having|contains?|each|approx(?:imately)?|about|around|roughly|got)\b/g,' ')
-              .replace(/\b(g|ml|kg|l|kcal|kj|carb|protein|fat|per|pack|packet|bag|tub|bottle|carton|box|dollars?|bucks?|costs?|priced?)\b/g,' ')
-              .replace(/\s+/g,' ').trim();
-  if(name) out.name = name.replace(/\b([a-z])/g, c=>c.toUpperCase());
+  const name=parts.sort((a,b)=>a.i-b.i).map(x=>x.text).filter(t=>/[\d%]/.test(t)||t.length>=2).join(' ').replace(/\s+/g,' ').trim();
+  if(name) out.name=name.replace(/\b([a-z])/g,c=>c.toUpperCase());
   return out;
 }
 
 function openVoiceFill(onParsed){
   const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-  showModal('Add by voice', `
-    <p class="muted" style="font-size:13px;margin-top:0">Say the food and its numbers together, e.g. <i>"5% beef mince, 20 g protein, 3 g carbs, 10 g fat, 120 calories per 100 g"</i>. You can also tap the box and use your keyboard's 🎤.</p>
+  showModal('Add by text/voice', `
+    <p class="muted" style="font-size:13px;margin-top:0">Say or type the food and its numbers, e.g. <i>"5% beef mince, 20 g protein, 120 cal per 100 g"</i> — or <b>paste a nutrition label</b> straight from a website and it'll read the panel. You can also tap the box and use your keyboard's 🎤.</p>
     <div style="text-align:center;margin:4px 0 12px"><button class="btn" id="vfMic" style="border-radius:999px;padding:12px 22px">🎤 <span id="vfMicLabel">Tap to speak</span></button></div>
     <textarea id="vfText" placeholder="…or type / dictate here" style="width:100%;height:88px;border:1px solid var(--border-strong);border-radius:10px;padding:10px;font-size:14px;background:var(--surface);color:var(--ink);font-family:var(--sans)"></textarea>
     <div id="vfStatus" style="font-size:12px;color:var(--muted);margin:8px 2px 0;min-height:16px"></div>
@@ -1318,7 +1625,7 @@ function openVoiceFill(onParsed){
   setTimeout(()=>txt.focus(),50);
 }
 
-function openPantryEditor(pid, onCreate){
+function openPantryEditor(pid, onCreate, prefill){
   const isNew=!pid;
   const p = pid ? clone(item(pid)) : {id:uid(), name:'', cat:'Pantry', size:1, unit:'kg', price:0, onHand:0, nutri:{kcal:0,p:0,c:0,f:0}};
   const n = p.nutri || {kcal:0,p:0,c:0,f:0};
@@ -1331,8 +1638,8 @@ function openPantryEditor(pid, onCreate){
   const body=`
     <label class="field"><span class="lab">Item name</span><input type="text" id="iName" value="${esc(p.name)}" placeholder="e.g. Beef topside roast"></label>
     <div style="display:flex;gap:8px;margin:0 0 12px">
-      <button type="button" class="btn ghost tiny" id="voiceFill" style="flex:1">🎤 Add by voice</button>
-      <button type="button" class="btn ghost tiny" id="offSearch" style="flex:1">🔍 Food database</button>
+      <button type="button" class="btn ghost tiny" id="voiceFill" style="flex:1">🎤 Add by text/voice</button>
+      <button type="button" class="btn ghost tiny" id="offSearch" style="flex:1">🔍 Search</button>
     </div>
     <label class="field"><span class="lab">Category</span><select id="iCat">${catOpts}</select></label>
     <div class="row">
@@ -1389,46 +1696,40 @@ function openPantryEditor(pid, onCreate){
     $modalQ('#enToggle [data-eu]').forEach(b=>b.classList.toggle('on', b.dataset.eu===enUnit));
   };
   $modalQ('#enToggle [data-eu]').forEach(b=>b.addEventListener('click',()=>setEn(b.dataset.eu)));
-  $id('offSearch').addEventListener('click',()=>openFoodSearch(food=>{
+  // Shared additive fill used by Search, text/voice, and barcode scan.
+  // Only overwrites the fields the incoming data actually specifies.
+  function applyFood(food){
+    if(!food || !Object.keys(food).length){ toast('Couldn\u2019t read that \u2014 try e.g. "chicken mince, 20p, 120 cal per 100g, $8"'); return false; }
     if(food.name) $id('iName').value = food.name;
-    $id('nBasisAmt').value = 100;                       // Open Food Facts nutrition is per 100 g/ml
-    const kcal = food.kcal||0;
-    $id('nK').value = +(enUnit==='kJ' ? kcal*KJ_PER_KCAL : kcal).toFixed(2);
-    if(food.p!=null) $id('nP').value = food.p;
-    if(food.c!=null) $id('nC').value = food.c;
-    if(food.f!=null) $id('nF').value = food.f;
-    if(food.size>0) $id('iSize').value = food.size;
-    if(food.unit){ const sel=$id('iUnit'); if([...sel.options].some(o=>o.value===food.unit)) sel.value=food.unit; }
-    upd();
-    toast('Filled from Open Food Facts — add your price');
-  }));
-  $id('voiceFill').addEventListener('click',()=>openVoiceFill(food=>{
-    if(food.name) $id('iName').value = food.name;
-    // infer the item's unit from a spoken pack size or nutrition basis
-    if(food.packUnit){ const sel=$id('iUnit'); if([...sel.options].some(o=>o.value===food.packUnit)) sel.value=food.packUnit; }
+    const packUnit = food.packUnit || food.unit;
+    const packSize = (food.packSize!=null) ? food.packSize : food.size;
+    if(packUnit){ const sel=$id('iUnit'); if([...sel.options].some(o=>o.value===packUnit)) sel.value=packUnit; }
     else if(food.basisUnit){
-      const sel=$id('iUnit'); const wantFam = food.basisUnit==='ml'?'volume':'weight';
-      const want = food.basisUnit==='ml'?'ml':'g';
+      const sel=$id('iUnit'); const wantFam=food.basisUnit==='ml'?'volume':'weight'; const want=food.basisUnit==='ml'?'ml':'g';
       if(UNITS[sel.value].family!==wantFam && [...sel.options].some(o=>o.value===want)) sel.value=want;
     }
-    if(food.packSize>0) $id('iSize').value = food.packSize;
+    if(packSize>0) $id('iSize').value = packSize;
     if(food.price!=null) $id('iPrice').value = food.price;
-    upd();                                             // recalc + snap basis if unit family changed
+    upd();                                              // recalc + snap basis if unit family changed
     if(food.basisAmt>0) $id('nBasisAmt').value = food.basisAmt;   // set after upd so it isn't overwritten
-    if(food.kj!=null){ if(enUnit!=='kJ') setEn('kJ'); $id('nK').value = +food.kj.toFixed(2); }
+    if(food.kj!=null && food.kcal!=null){ $id('nK').value = +(enUnit==='kJ' ? food.kj : food.kcal).toFixed(2); }
+    else if(food.kj!=null){ if(enUnit!=='kJ') setEn('kJ'); $id('nK').value = +food.kj.toFixed(2); }
     else if(food.kcal!=null){ if(enUnit!=='kcal') setEn('kcal'); $id('nK').value = +food.kcal.toFixed(2); }
     if(food.p!=null) $id('nP').value = food.p;
     if(food.c!=null) $id('nC').value = food.c;
     if(food.f!=null) $id('nF').value = food.f;
-    toast('Filled from what you said — check it over');
-  }));
+    return true;
+  }
+  $id('offSearch').addEventListener('click',()=>openFoodSearch(food=>{ if(applyFood(food)) toast('Filled from Open Food Facts — add your price'); }));
+  $id('voiceFill').addEventListener('click',()=>openVoiceFill(food=>{ if(applyFood(food)) toast('Filled — check it over'); }));
+  if(prefill){ if(applyFood(prefill)) toast(prefill.name?'Found it — check it over':'Found the barcode — add the name'); }
   $id('cancelItem').addEventListener('click', onCreate?closeModal2:closeModal);
   if(!isNew) $id('delItem').addEventListener('click',()=>{
-    if(confirm('Delete "'+p.name+'"? It will be removed from any meals using it.')){
+    showConfirm({title:'Delete item?', message:'Delete "'+esc(p.name)+'"? It will be removed from any meals using it.', yes:'Delete', danger:true, stacked:true, onYes:()=>{
       S.pantry=S.pantry.filter(x=>x.id!==p.id);
       S.meals.forEach(m=>m.ings=(m.ings||[]).filter(i=>i.pid!==p.id));
       save(); closeModal(); render();
-    }
+    }});
   });
   $id('saveItem').addEventListener('click',()=>{
     p.name=$id('iName').value.trim();
@@ -1657,9 +1958,7 @@ function openExport(){
   });
 }
 function confirmReset(){
-  if(confirm('Reset everything back to the starter data? Your meals, prices and plan will be replaced.')){
-    S=clone(SEED); save(); render(); toast('Reset to starter data');
-  }
+  showConfirm({title:'Reset everything?', message:'Reset back to the starter data? Your meals, prices and plan will be replaced.', yes:'Reset', danger:true, onYes:()=>{ S=clone(SEED); save(); render(); toast('Reset to starter data'); }});
 }
 
 /* ---------------- Modal plumbing (supports 1 stacked modal) ---------------- */
@@ -1674,6 +1973,18 @@ function showModal(title, bodyHtml, stacked){
 }
 function closeModal(){ document.getElementById('modalRoot').innerHTML=''; }
 function closeModal2(){ const s=document.querySelectorAll('.scrim[data-lvl="2"]'); s.forEach(x=>x.remove()); }
+function showConfirm(opts){
+  const stacked=!!opts.stacked;
+  showModal(opts.title||'Are you sure?', `
+    <p style="font-size:14.5px;line-height:1.5;margin:0 0 18px;color:var(--ink)">${opts.message||''}</p>
+    <div style="display:flex;gap:10px">
+      <button class="btn subtle" id="cfNo" style="flex:1">Cancel</button>
+      <button class="btn${opts.danger?' danger':''}" id="cfYes" style="flex:1">${esc(opts.yes||'Confirm')}</button>
+    </div>`, stacked);
+  const close = stacked?closeModal2:closeModal;
+  $id('cfNo').addEventListener('click',close);
+  $id('cfYes').addEventListener('click',()=>{ close(); if(opts.onYes) opts.onYes(); });
+}
 function $modalQ(sel){ return Array.from(document.querySelectorAll('#modalRoot '+sel)); }
 function $id(id){ return document.getElementById(id); }
 
